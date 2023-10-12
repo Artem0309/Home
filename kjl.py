@@ -16,7 +16,7 @@ response = requests.get(url)
 
 if response.status_code == 200:
     soup = BeautifulSoup(response.content, 'html.parser')
-    usd_rate = 36.5
+    usd_rate = 36.43
     converter = CurrencyConverter(usd_rate)
     local_currency_amount = float(input("Введите сумму в вашей валюте: "))
     usd_amount = converter.convert_to_usd(local_currency_amount)
